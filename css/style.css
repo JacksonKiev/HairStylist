@@ -624,7 +624,11 @@ body {
 }
 .passion__important {
   font-weight: 700;
-  color: #fff
+  color: #fff;
+  white-space: nowrap
+}
+.best {
+  background-color: #c2b8cc
 }
 @media (min-width:37.5em) {
   .hero__body {
@@ -785,6 +789,12 @@ body {
   .passion__important {
     font-size: 1rem
   }
+  .best {
+    padding-top: 9.375rem
+  }
+  .best {
+    padding-bottom: 9.375rem
+  }
 }
 @media (max-width:40em) {
   .menu__body {
@@ -866,6 +876,12 @@ body {
   }
   .passion__important {
     font-size: .875rem
+  }
+  .best {
+    padding-top: 2.5rem
+  }
+  .best {
+    padding-bottom: 2.5rem
   }
 }
 @media (max-width:61.99875em) {
@@ -1266,6 +1282,26 @@ body {
   @supports not (font-size:clamp(0.875rem ,0.8392857143rem + 0.1785714286vw ,1rem)) {
     .passion__important {
       font-size: calc(.875rem + .125 * (100vw - 20rem)/ 70)
+    }
+  }
+  @supports (padding-top:clamp(2.5rem ,0.5357142857rem + 9.8214285714vw ,9.375rem)) {
+    .best {
+      padding-top: clamp(2.5rem ,.5357142857rem + 9.8214285714vw ,9.375rem)
+    }
+  }
+  @supports not (padding-top:clamp(2.5rem ,0.5357142857rem + 9.8214285714vw ,9.375rem)) {
+    .best {
+      padding-top: calc(2.5rem + 6.875 * (100vw - 20rem)/ 70)
+    }
+  }
+  @supports (padding-bottom:clamp(2.5rem ,0.5357142857rem + 9.8214285714vw ,9.375rem)) {
+    .best {
+      padding-bottom: clamp(2.5rem ,.5357142857rem + 9.8214285714vw ,9.375rem)
+    }
+  }
+  @supports not (padding-bottom:clamp(2.5rem ,0.5357142857rem + 9.8214285714vw ,9.375rem)) {
+    .best {
+      padding-bottom: calc(2.5rem + 6.875 * (100vw - 20rem)/ 70)
     }
   }
 }
