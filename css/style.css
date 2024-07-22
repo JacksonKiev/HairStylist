@@ -584,6 +584,7 @@ body {
   position: relative
 }
 .passion__container {
+  position: relative;
   aspect-ratio: 1440/720;
   display: flex;
   justify-content: center;
@@ -611,10 +612,19 @@ body {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%)
 }
-.passion__important {
+.passion__important-item {
+  position: absolute;
+  z-index: 2;
+  -webkit-transform: translate(0,-50%);
+  transform: translate(0,-50%);
   -webkit-writing-mode: vertical-lr;
   -ms-writing-mode: tb-lr;
-  writing-mode: vertical-lr
+  writing-mode: vertical-lr;
+  top: 0
+}
+.passion__important {
+  font-weight: 700;
+  color: #fff
 }
 @media (min-width:37.5em) {
   .hero__body {
@@ -769,6 +779,12 @@ body {
   .passion__container {
     padding-bottom: 6.625rem
   }
+  .passion__important-item {
+    right: 3.125rem
+  }
+  .passion__important {
+    font-size: 1rem
+  }
 }
 @media (max-width:40em) {
   .menu__body {
@@ -844,6 +860,12 @@ body {
   }
   .passion__container {
     padding-bottom: 2.5rem
+  }
+  .passion__important-item {
+    right: .9375rem
+  }
+  .passion__important {
+    font-size: .875rem
   }
 }
 @media (max-width:61.99875em) {
@@ -1224,6 +1246,26 @@ body {
   @supports not (padding-bottom:clamp(2.5rem ,1.3214285714rem + 5.8928571429vw ,6.625rem)) {
     .passion__container {
       padding-bottom: calc(2.5rem + 4.125 * (100vw - 20rem)/ 70)
+    }
+  }
+  @supports (right:clamp(0.9375rem ,0.3125rem + 3.125vw ,3.125rem)) {
+    .passion__important-item {
+      right: clamp(.9375rem ,.3125rem + 3.125vw ,3.125rem)
+    }
+  }
+  @supports not (right:clamp(0.9375rem ,0.3125rem + 3.125vw ,3.125rem)) {
+    .passion__important-item {
+      right: calc(.9375rem + 2.1875 * (100vw - 20rem)/ 70)
+    }
+  }
+  @supports (font-size:clamp(0.875rem ,0.8392857143rem + 0.1785714286vw ,1rem)) {
+    .passion__important {
+      font-size: clamp(.875rem ,.8392857143rem + .1785714286vw ,1rem)
+    }
+  }
+  @supports not (font-size:clamp(0.875rem ,0.8392857143rem + 0.1785714286vw ,1rem)) {
+    .passion__important {
+      font-size: calc(.875rem + .125 * (100vw - 20rem)/ 70)
     }
   }
 }
