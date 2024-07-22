@@ -1132,13 +1132,15 @@ body {
     bottom: -8%
   }
   .best__content {
-    flex-direction: column
+    flex-direction: column;
+    align-items: center
   }
-  .best__item:nth-child(2) {
+  .best__item {
     text-align: center
   }
   .best .item-best__body {
-    display: inline-block
+    display: inline-block;
+    text-align: center
   }
 }
 @media (max-width:37.5em) {
