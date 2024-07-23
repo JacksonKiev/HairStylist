@@ -237,7 +237,7 @@ body {
   grid-auto-flow: row;
   grid-template-columns: repeat(2,1fr)
 }
-.menu__link {
+.footer-menu__link {
   font-weight: 500;
   color: #fff
 }
@@ -1687,7 +1687,7 @@ body {
   .menu__link:hover {
     color: #f95454
   }
-  .menu__link:hover {
+  .footer-menu__link:hover {
     text-decoration: underline
   }
   .invite__link:hover {
