@@ -232,7 +232,7 @@ body {
   max-width: 77.5rem;
   margin: 0 auto
 }
-.footer__menu {
+.footer-menu {
   display: grid;
   grid-auto-flow: row;
   grid-template-columns: repeat(2,1fr)
@@ -240,9 +240,6 @@ body {
 .footer-menu__link {
   font-weight: 500;
   color: #fff
-}
-.invite {
-  text-align: right
 }
 .invite__title:not(:last-child) {
   margin-bottom: 1rem
@@ -783,6 +780,11 @@ body {
     max-width: 19.375rem
   }
 }
+@media (min-width:53.75em) {
+  .invite {
+    text-align: right
+  }
+}
 @media (min-width:61.99875em) {
   .love__pictire {
     flex: 1 1 39%
@@ -838,12 +840,12 @@ body {
   .footer {
     padding-bottom: 6.25rem
   }
-  .footer__menu {
+  .footer-menu {
     -webkit-column-gap: 4.6875rem;
     -moz-column-gap: 4.6875rem;
     column-gap: 4.6875rem
   }
-  .footer__menu {
+  .footer-menu {
     row-gap: 3.125rem
   }
   .invite__link {
@@ -960,12 +962,12 @@ body {
   .footer {
     padding-bottom: 2.5rem
   }
-  .footer__menu {
+  .footer-menu {
     -webkit-column-gap: .9375rem;
     -moz-column-gap: .9375rem;
     column-gap: .9375rem
   }
-  .footer__menu {
+  .footer-menu {
     row-gap: .9375rem
   }
   .invite__link {
@@ -1050,6 +1052,14 @@ body {
 @media (max-width:61.99875em) {
   .decor-love {
     display: none
+  }
+}
+@media (max-width:53.75em) {
+  .footer__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 2.5rem
   }
 }
 @media (max-width:47.99875em) {
@@ -1309,26 +1319,26 @@ body {
     }
   }
   @supports ((-moz-column-gap:clamp(0.9375rem ,-0.1339285714rem + 5.3571428571vw ,4.6875rem)) or (column-gap:clamp(0.9375rem ,-0.1339285714rem + 5.3571428571vw ,4.6875rem))) {
-    .footer__menu {
+    .footer-menu {
       -webkit-column-gap: clamp(.9375rem ,-.1339285714rem + 5.3571428571vw ,4.6875rem);
       -moz-column-gap: clamp(.9375rem ,-.1339285714rem + 5.3571428571vw ,4.6875rem);
       column-gap: clamp(.9375rem ,-.1339285714rem + 5.3571428571vw ,4.6875rem)
     }
   }
   @supports not ((-moz-column-gap:clamp(0.9375rem ,-0.1339285714rem + 5.3571428571vw ,4.6875rem)) or (column-gap:clamp(0.9375rem ,-0.1339285714rem + 5.3571428571vw ,4.6875rem))) {
-    .footer__menu {
+    .footer-menu {
       -webkit-column-gap: calc(.9375rem + 3.75 * (100vw - 20rem)/ 70);
       -moz-column-gap: calc(.9375rem + 3.75 * (100vw - 20rem)/ 70);
       column-gap: calc(.9375rem + 3.75 * (100vw - 20rem)/ 70)
     }
   }
   @supports (row-gap:clamp(0.9375rem ,0.3125rem + 3.125vw ,3.125rem)) {
-    .footer__menu {
+    .footer-menu {
       row-gap: clamp(.9375rem ,.3125rem + 3.125vw ,3.125rem)
     }
   }
   @supports not (row-gap:clamp(0.9375rem ,0.3125rem + 3.125vw ,3.125rem)) {
-    .footer__menu {
+    .footer-menu {
       row-gap: calc(.9375rem + 2.1875 * (100vw - 20rem)/ 70)
     }
   }
